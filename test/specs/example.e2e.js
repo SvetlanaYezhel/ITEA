@@ -1,5 +1,6 @@
-const LoginPage = require('../pageobjects/login.page');
-const SecurePage = require('../pageobjects/secure.page');
+const desctopePage = require('../../pageobjects/desktopPage.js');
+require("expect-webdriverio").setOptions({ wait: 2000, interval: 500 });
+require('../../node_modules/webdriverio')
 
 describe('My Login application', () => {
     it('should login with valid credentials', async () => {

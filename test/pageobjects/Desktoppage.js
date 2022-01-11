@@ -1,17 +1,10 @@
-
-
 const Page = require('./page');
 
-/**
- * sub page containing specific selectors and methods for a specific page
- */
-class SecurePage extends Page {
-    /**
-     * define selectors using getter methods
-     */
-    get flashAlert() {
-        return $('#flash');
+class desktopPage extends Page {
+
+    get priceofFirstElement() {
+        return $('div[class="product-grid"] > div:nth-child(1) span[class="price actual-price"]');
     }
 }
 
-module.exports = new SecurePage();
+module.exports = new desktopPage();
